@@ -43,6 +43,13 @@
             sqlDataSource.title = "My SQL Server";
             sqlDataSource.port="1433";
 
+            var postgresDataSource = new $.ig.RVPostgresDataSource();
+            postgresDataSource.id="5678";
+            postgresDataSource.host = "localhost";
+            postgresDataSource.database = "postgres";
+            postgresDataSource.title = "My PostgreSQL";
+            postgresDataSource.port="5432";
+
             const restDataSource = new $.ig.RVRESTDataSource();
             restDataSource.id = "RestDataSource"
             restDataSource.url = "https://nitinrestapi.azurewebsites.net/api/employees";
@@ -50,7 +57,7 @@
             restDataSource.subtitle = "Excel2Json";
             restDataSource.useAnonymousAuthentication = true;
 
-            callback(new $.ig.RevealDataSources([sqlDataSource,restDataSource], [excelDataSourceItem], true));
+            callback(new $.ig.RevealDataSources([sqlDataSource,postgresDataSource,restDataSource], [excelDataSourceItem], true));
         };
     </script>
 </body>
