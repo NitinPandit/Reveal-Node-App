@@ -10,7 +10,7 @@ app.use(cors()); // DEVELOPMENT only! In production, configure appropriately.
 
 const authenticationProvider = async (userContext, dataSource) => {
 	if (dataSource instanceof reveal.RVSqlServerDataSource) {
-		return new reveal.RVUserNamePasswordDataSourceCredential("nitinHR", "0202#@!1990mY");
+		return new reveal.RVUserNamePasswordDataSourceCredential("SQL-DBUserName", "DB Server Password");
     }
 	return null;
 }
